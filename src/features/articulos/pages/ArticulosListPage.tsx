@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { getDoc } from "firebase/firestore";
 import useArticulosStore from "@stores/useArticuloStore";
 import { Articulo } from "@features/articulos/models/Articulo";
-import { IonContent, IonGrid, IonRow, IonCol } from '@ionic/react';
 import ArticuloCard from "@features/articulos/components/ArticuloCard";
 
 export default function ArticulosListPage() {
@@ -46,16 +45,12 @@ export default function ArticulosListPage() {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <IonContent>
-      <IonGrid>
-        <IonRow className="ion-align-items-stretch">
-          {articulosData.map((articulo: Articulo) => (
-            <IonCol size="12" sizeMd="4" key={articulo.id}>
-              <ArticuloCard articulo={articulo} />
-            </IonCol>
-          ))}
-        </IonRow>
-      </IonGrid>
-    </IonContent>
+    <section>
+      {articulosData.map((articulo: Articulo) => (
+        <div key={articulo.id}>
+          <ArticuloCard articulo={articulo} />
+        </div>
+      ))}
+    </section>
   )
 }
