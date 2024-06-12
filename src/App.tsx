@@ -11,9 +11,7 @@ export default function App() {
     <React.Fragment>
       <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="es">
         <BrowserRouter basename="/React-UribiaOnlineFrontend">
-          <IonApp>
-            <AppRouter />
-          </IonApp>
+          <AppRouter />
         </BrowserRouter>
       </LocalizationProvider>
     </React.Fragment>
