@@ -45,12 +45,10 @@ export default function ArticulosListPage() {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <section>
+    <div className="card-group">
       {articulosData.map((articulo: Articulo) => (
-        <div key={articulo.id}>
-          <ArticuloCard articulo={articulo} />
-        </div>
+        <ArticuloCard key={articulo.id} articulo={articulo} />
       ))}
-    </section>
+    </div>
   )
 }
