@@ -1,0 +1,60 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(238, 242, 246);
+}
+
+.main-wrapper {
+    padding: 0;
+    margin: 0;
+}
+
+.grid-table-linkable-column {
+    text-decoration: none;
+}
+
+.breadcrumbs {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    justify-content: flex-start;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+}
+
+.box-shadow-layout {
+    padding: 1.7rem;
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.mini-card {
+    padding: 16px 20px;
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.mini-card .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mini-card .title {
+    color: rgb(140, 140, 140)
+}
+
+@import '@ionic/react/css/core.css';
+@import '@ionic/react/css/normalize.css';
+@import '@ionic/react/css/structure.css';
+@import '@ionic/react/css/typography.css';
+@import '@ionic/react/css/padding.css';
+@import '@ionic/react/css/float-elements.css';
+@import '@ionic/react/css/text-alignment.css';
+@import '@ionic/react/css/text-transformation.css';
+@import '@ionic/react/css/flex-utils.css';
+@import '@ionic/react/css/display.css';
