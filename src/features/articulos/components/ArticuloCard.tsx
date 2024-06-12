@@ -21,7 +21,7 @@ const ArticuloCard: React.FC<ArticuloCardProps> = ({ articulo }) => {
   };
 
   const handleShare = () => {
-    const articleUrl = encodeURIComponent(window.location.href);
+    const articleUrl = encodeURIComponent(`https://vapinedo.github.io/React-UribiaOnlineFrontend/articulo/${articulo.id}`);
     console.log({ articleUrl });
     const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${articleUrl}`;
     window.open(facebookShareUrl, '_blank');
