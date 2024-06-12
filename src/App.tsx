@@ -1,6 +1,5 @@
 import 'dayjs/locale/es';
 import React from "react";
-import { IonApp } from '@ionic/react';
 import AppRouter from "@app/routes/AppRouter";
 import { BrowserRouter } from "react-router-dom";
 import { LocalizationProvider } from '@mui/x-date-pickers';
