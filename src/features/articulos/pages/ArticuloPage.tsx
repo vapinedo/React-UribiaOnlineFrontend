@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import useArticuloStore from '@stores/useArticuloStore';
 import { Articulo } from '@features/articulos/models/Articulo';
 
@@ -13,11 +13,10 @@ const ArticuloPage = () => {
         if (id) {
             const fetchArticulo = async () => {
                 try {
-                    const nuevoArticulo = await getArticulo(id); // Asumiendo que getArticulo devuelve una Promesa
+                    const nuevoArticulo = await getArticulo(id);
                     setArticulo(nuevoArticulo);
                 } catch (error) {
                     console.error('Error al cargar el artículo:', error);
-                    // Manejo del error
                 }
             };
             fetchArticulo();
@@ -29,7 +28,7 @@ const ArticuloPage = () => {
     }
 
     if (error) {
-        return <p>Error al cargar artículo: {error.message}</p>;
+        return <p>Error al cargar artículo</p>;
     }
 
     if (!articulo) {
